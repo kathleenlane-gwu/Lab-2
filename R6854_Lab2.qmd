@@ -1,0 +1,36 @@
+---
+title: "R6854_Lab2"
+format: pdf
+editor: visual
+---
+
+## Loading the Clinical Trial Data
+
+```{r}
+library(survival)
+data(pbc)
+```
+
+## Non-trivial transformation/Analysis: finding the mean age for each sex in the trial.
+
+```{r}
+library(tidyverse)
+pbc |>
+  group_by(sex) |>
+  summarize(mean_age = mean(age))
+```
+
+## Visualization
+
+```{r}
+ggplot(pbc,
+       aes(x = age,
+           y = platelet)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(se = FALSE) +
+  facet_wrap(~sex)
+```
+
+## Interpretation
+
+The plot shows that platelet count generally decreases with age. Platelet count seems to decrease more consistently among females as they age, but overall seems to decrease less over time than their male counterparts. This visualization also shows that there are more females in the clinical trial than men.
