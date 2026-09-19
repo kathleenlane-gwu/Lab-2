@@ -28,7 +28,8 @@ ggplot(pbc,
            y = platelet)) +
   geom_point(alpha = 0.5) +
   geom_smooth(se = FALSE) +
-  facet_wrap(~sex)
+  facet_wrap(~sex) +
+  labs(title = "Platelet Count Decreases with Age in Both Women and Men", x="Age",y="Platelet Count")
 ```
 
 ## Interpretation
