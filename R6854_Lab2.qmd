@@ -34,3 +34,7 @@ ggplot(pbc,
 ## Interpretation
 
 The plot shows that platelet count generally decreases with age. Platelet count seems to decrease more consistently among females as they age, but overall seems to decrease less over time than their male counterparts. This visualization also shows that there are more females in the clinical trial than men.
+
+## Comparison between R and Python
+
+I find python code easier to write usually, but I find it easier to create visuals in R. I also trust the visual output of analyses from R more, as it is catered more for statistical analyses. I was able to produce the code for the visualization in R much more quickly because all visualizations in R follow the same structure in ggplot2. I had to use AI to find code to create the same visualiztion in Python.
