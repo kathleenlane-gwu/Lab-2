@@ -11,7 +11,8 @@ ggplot(pbc,
            y = platelet)) +
   geom_point(alpha = 0.5) +
   geom_smooth(se = FALSE) +
-  facet_wrap(~sex)
+  facet_wrap(~sex) +
+  labs(title = "Platelet Count Decreases with Age in Both Women and Men", x="Age",y="Platelet Count")
 
 What code would mimic this output in Python
 ```
@@ -19,15 +20,15 @@ Response: If you prefer a more grammar-of-graphics style equivalent to ggplot2, 
 ```
 from plotnine import (
     ggplot, aes, geom_point, geom_smooth,
-    facet_wrap, theme_bw
+    facet_wrap, theme_bw, labs
 )
 
-(
-    ggplot(pbc, aes(x='age', y='platelet'))
-    + geom_point(alpha=0.5)
-    + geom_smooth(se=False)
-    + facet_wrap('~sex')
-    + theme_bw()
+(ggplot(pbc, aes(x='age', y='platelet'))
+ + geom_point(alpha=0.5)
+ + geom_smooth(method='loess', se=False, color='blue')
+ + facet_wrap('~sex')
+ + theme_bw()
+ + labs(title = "Platelet Count Decreases with Age in Both Women and Men", x="Age",y="Platelet Count")
 )
 ```
 
@@ -38,14 +39,15 @@ ModuleNotFoundError                       Traceback (most recent call last)
 Cell In[7], line 1
 ----> 1 from plotnine import (
       2     ggplot, aes, geom_point, geom_smooth,
-      3     facet_wrap, theme_b
+      3     facet_wrap, theme_bw, labs
       4 )
       6 (ggplot(pbc, aes(x='age', y='platelet'))
       7  + geom_point(alpha=0.5)
       8  + geom_smooth(se=False)
       9  + facet_wrap('~sex')
      10  + theme_bw()
-     11 )
+     11  + labs(title = "Platelet Count Decreases with Age in Both Women and Men", x="Age",y="Platelet Count")
+     12 )
 
 ModuleNotFoundError: No module named 'plotnine'
 ```
