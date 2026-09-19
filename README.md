@@ -25,7 +25,7 @@ cd Lab-2
 ls 
 ```
 ## Analysis
-To run `Py6854_Lab2.ipynb`, you must have Jupyter or the IDE VS Code. I prefer to run my Jupyter Notebooks in VS Code. Open `Py6854_Lab2.ipynb` in either Jupyter or VS Code app. To run the notebook from scratch in Jupyter, click Run menu, then Restart Kernel and Run All Cells. To run the notebook from scratch in VS Code, click the Restart arrow and then the Run All button.
+To run `Py6854_Lab2.ipynb`, you must have JupyterLab or the IDE VS Code. I prefer to run my Jupyter Notebooks in VS Code. Go to your desktop folder in your local files, open the Lab-2 folder, and open `Py6854_Lab2.ipynb` in either JupyterLab or the VS Code app. To run the notebook from scratch in Jupyter, click Run menu, then Restart Kernel and Run All Cells. To run the notebook from scratch in VS Code, click the Restart arrow and then the Run All button.
 
 To run `R6854_Lab2.qmd`, you must have RStudio. Open `R6854_Lab2.qmd` in RStudio and click the 'Render' button in the Quarto document to run the notebook from scratch.
 
